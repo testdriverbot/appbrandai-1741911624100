@@ -1,0 +1,33 @@
+version: 4.2.19
+session: 67d378a052f23900c465c8e4
+steps:
+  - prompt: Enter a valid email address in the "Email address" field.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+  - prompt: Click the "Continue" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the email input field
+        action: click
+  - prompt: Assert that the user is prompted for a password or redirected correctly.
+    commands:
+      - command: assert
+        expect: No account found with this identifier. Please check and try again.
+  - prompt: >-
+      Assert there are no error messages displayed.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: No account found with this identifier. Please check and try again.
+  - prompt: >-
+      Assert there are no error messages displayed.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: No account found with this identifier. Please check and try again.
