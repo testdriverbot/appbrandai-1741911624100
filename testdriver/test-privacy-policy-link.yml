@@ -1,0 +1,9 @@
+version: 4.2.19
+session: 67d3789552f23900c465c8dc
+steps:
+  - prompt: Click on the "Privacy Policy" link.
+    commands:
+      - command: hover-text
+        text: Privacy Policy
+        description: link to the privacy policy at the bottom of the page
+        action: click
