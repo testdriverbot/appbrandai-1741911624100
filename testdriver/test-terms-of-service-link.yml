@@ -1,0 +1,9 @@
+version: 4.2.19
+session: 67d378956fae4811a69e97a4
+steps:
+  - prompt: Click on the "Terms of Service" link.
+    commands:
+      - command: hover-text
+        text: Terms of Service
+        description: link at the bottom of the login page
+        action: click
