@@ -1,0 +1,27 @@
+version: 4.2.19
+session: 67d378956fae4811a69e97a6
+steps:
+  - prompt: Enter an invalid email address in the "Email address" field.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email input field
+        action: click
+      - command: type
+        text: invalid-email
+  - prompt: Click the "Continue" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the email input field
+        action: click
+  - prompt: Assert that an appropriate error message is displayed.
+    commands:
+      - command: assert
+        expect: Please match the requested format
+  - prompt: >-
+      Assert that the user is not allowed to proceed with invalid email.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Please match the requested format
