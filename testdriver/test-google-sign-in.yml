@@ -1,0 +1,19 @@
+version: 4.2.19
+session: 67d3788a6fae4811a69e97a0
+steps:
+  - prompt: Click the "Continue with Google" button.
+    commands:
+      - command: hover-text
+        text: Continue with Google
+        description: button to sign in using Google account
+        action: click
+  - prompt: Assert that a Google sign-in popup or page appears.
+    commands:
+      - command: assert
+        expect: Google sign-in page is visible
+  - prompt: >-
+      Assert that no errors appear during the Google sign-in process.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: no errors are visible on the Google sign-in page
